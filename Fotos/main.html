@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            background: #f5f5f5;
+            font-family: sans-serif;
+        }
+
+        .image-box {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .penguins img {
+            border-radius: 100% / 100%;
+            -webkit-filter: sepia(100%);
+            filter: sepia(100%);
+            border: 2px solid black;
+        }
+
+        .football {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-image: url('football_field.jpg');
+            background-size: cover;
+            filter: grayscale(100%);
+            border: 20px solid transparent;
+            border-image: url('tic-tac-toe.png') 40 round;
+        }
+
+        .dino img {
+            -webkit-filter: hue-rotate(90deg) drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.8));
+            filter: hue-rotate(90deg) drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.8));
+        }
+
+        .seagull {
+            background: linear-gradient(to bottom right, #9861ff, #d8d8ff);
+            filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.8));
+        }
+
+        .butterfly {
+            width: 280px;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 100px 0 100px 0 / 100px 0 100px 0;
+            display: inline-block;
+        }
+
+        .butterfly img {
+            width: 100%;
+            height: auto;
+            display: block;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+        }
+
+        .image-box.presenting {
+            background: none;
+            padding: 0;
+        }
+
+        .presenting .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            background: url('theater_stage.jpg') center/cover no-repeat;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+            border-radius: 12px;
+            z-index: 1;
+        }
+
+        .presenting .content {
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px 6px black;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding: 40px;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-box penguins">
+        <img src="penguins.jpg" alt="Penguins" width="180" />
+    </div>
+
+    <div class="image-box football"></div>
+
+    <div class="image-box dino">
+        <img src="dinosaur.png" alt="Dino" width="180" />
+    </div>
+
+    <div class="image-box seagull">
+        <img src="seagull.png" alt="Seagull" width="200" />
+    </div>
+
+    <div class="butterfly">
+        <img src="butterfly.jpg" alt="Butterfly" width="280" />
+    </div>
+
+    <div class="image-box presenting">
+        <div class="background"></div>
+        <div class="content">Presenting</div>
+    </div>
+</body>
+
+</html>
